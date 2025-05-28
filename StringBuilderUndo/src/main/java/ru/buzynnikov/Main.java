@@ -4,7 +4,10 @@ public class Main {
     public static void main(String[] args) {
         MyStringBuilder stringBuilder = new MyStringBuilder(new StringBuilder("Hello"));
         stringBuilder.append(" World");
-        System.out.println(stringBuilder.toString()); // Hello World
+        System.out.println(stringBuilder.toString());// Hello World
+        stringBuilder.append("!!!");
+        System.out.println(stringBuilder.toString()); // Hello World!!!
+        stringBuilder.undo();
         stringBuilder.undo();
         System.out.println(stringBuilder.toString()); // Hello
         stringBuilder.delete(0, 3);
