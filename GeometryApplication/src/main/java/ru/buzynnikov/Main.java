@@ -1,9 +1,6 @@
 package ru.buzynnikov;
 
-import ru.buzynnikov.geometrylib.Circle;
-import ru.buzynnikov.geometrylib.Rectangle;
-import ru.buzynnikov.geometrylib.Shape;
-import ru.buzynnikov.geometrylib.Triangle;
+import ru.buzynnikov.geometrylib.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +10,7 @@ public class Main {
         System.out.println(triangle);
         Shape rectangle = new Rectangle(20, 20);
         System.out.println(rectangle);
+
+        System.out.println(GeometryUtils.compareShapes(circle, rectangle));
     }
 }
