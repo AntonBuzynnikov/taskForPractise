@@ -4,6 +4,9 @@ public class Cube implements ThreeDimensionalShape {
     private final double side;
 
     public Cube(double side) {
+        if (side <= 0) {
+            throw new IllegalArgumentException("Сторона должна быть положительным числом");
+        }
         this.side = side;
     }
 
