@@ -11,6 +11,6 @@ public class Main {
         Shape rectangle = new Rectangle(20, 20);
         System.out.println(rectangle);
 
-        System.out.println(GeometryUtils.compareShapes(circle, rectangle));
+        System.out.println(GeometryUtils.compareShapes(null, rectangle));
     }
 }

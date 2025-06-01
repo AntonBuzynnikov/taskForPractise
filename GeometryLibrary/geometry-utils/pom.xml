@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>geometry-utils</artifactId>
-    <version>1.0.0-SHAPSHOT</version>
+    <version>1.1.0-SHAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
