@@ -24,6 +24,10 @@ public class Rectangle implements Shape {
 
     @Override
     public String toString() {
+        if (width == height) {
+            return String.format("Квадрат [сторона=%.2f, площадь=%.2f, периметр=%.2f]",
+                    width, calculateArea(), calculatePerimeter());
+        }
         return String.format("Прямоугольник [ширина=%.2f, высота=%.2f, площадь=%.2f, периметр=%.2f]",
                 width, height, calculateArea(), calculatePerimeter());
     }
