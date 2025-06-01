@@ -4,6 +4,7 @@ import ru.buzynnikov.shapes.Shape;
 
 public class GeometryUtils {
     public static String compareShapes(Shape shape1, Shape shape2) {
+
         double area1 = shape1.calculateArea();
         double area2 = shape2.calculateArea();
 
