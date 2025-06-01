@@ -12,5 +12,8 @@ public class Main {
         System.out.println(rectangle);
 
         System.out.println(GeometryUtils.compareShapes(null, rectangle));
+
+        ThreeDimensionalShape cube = new Cube(10);
+        System.out.println(cube);
     }
 }
