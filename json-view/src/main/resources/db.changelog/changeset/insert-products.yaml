@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-into-products-table
+      author: Anton Buzynnikov
+      changes:
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Телефон
+              - column:
+                  name: price
+                  value: "15000"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Микроволновка
+              - column:
+                  name: price
+                  value: "5000"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Телевизор
+              - column:
+                  name: price
+                  value: "50000"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Компьютер
+              - column:
+                  name: price
+                  value: "80000"

@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-order
+      author: Anton Buzynnikov
+      changes:
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: status
+                  value: OPEN
+              - column:
+                  name: total_price
+                  value: "35000"
+              - column:
+                  name: user_id
+                  value: "1"

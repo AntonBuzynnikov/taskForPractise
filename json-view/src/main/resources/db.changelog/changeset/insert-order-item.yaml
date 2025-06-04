@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-order-item
+      author: Anton Buzynnikov
+      changes:
+        - insert:
+            tableName: order_item
+            columns:
+              - column:
+                  name: order_id
+                  value: 1
+              - column:
+                  name: product_id
+                  value: 1
+              - column:
+                  name: quantity
+                  value: 2
+        - insert:
+            tableName: order_item
+            columns:
+              - column:
+                  name: order_id
+                  value: 1
+              - column:
+                  name: product_id
+                  value: 2
+              - column:
+                  name: quantity
+                  value: 1
