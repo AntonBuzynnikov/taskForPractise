@@ -1,0 +1,544 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-authors-data
+      author: anton
+      changes:
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: full_name
+                  value: "Лев Толстой"
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: full_name
+                  value: "Фёдор Достоевский"
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: full_name
+                  value: "Антон Чехов"
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: full_name
+                  value: "Николай Гоголь"
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: full_name
+                  value: "Александр Пушкин"
+
+  - changeSet:
+      id: insert-books-data
+      author: anton
+      changes:
+        # Книги Льва Толстого (author_id = 1)
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Война и мир"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Анна Каренина"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Воскресение"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Севастопольские рассказы"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Детство"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Отрочество"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Юность"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Хаджи-Мурат"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Казаки"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Смерть Ивана Ильича"
+              - column:
+                  name: author_id
+                  valueNumeric: 1
+
+        # Книги Фёдора Достоевского (author_id = 2)
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Преступление и наказание"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Идиот"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Бесы"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Братья Карамазовы"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Униженные и оскорблённые"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Записки из подполья"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Бедные люди"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Игрок"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Записки из Мёртвого дома"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Сон смешного человека"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Кроткая"
+              - column:
+                  name: author_id
+                  valueNumeric: 2
+
+        # Книги Антона Чехова (author_id = 3)
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Вишнёвый сад"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Чайка"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Дядя Ваня"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Три сестры"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Палата №6"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Человек в футляре"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Дама с собачкой"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Ионыч"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Степь"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Душечка"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Каштанка"
+              - column:
+                  name: author_id
+                  valueNumeric: 3
+
+        # Книги Николая Гоголя (author_id = 4)
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Мёртвые души"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Ревизор"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Тарас Бульба"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Вечера на хуторе близ Диканьки"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Вий"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Нос"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Шинель"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Портрет"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Записки сумасшедшего"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Невский проспект"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Майская ночь, или Утопленница"
+              - column:
+                  name: author_id
+                  valueNumeric: 4
+
+        # Книги Александра Пушкина (author_id = 5)
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Евгений Онегин"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Капитанская дочка"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Пиковая дама"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Дубровский"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Руслан и Людмила"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Борис Годунов"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Медный всадник"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Сказка о царе Салтане"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Сказка о рыбаке и рыбке"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Сказка о мёртвой царевне"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Полтава"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Цыганы"
+              - column:
+                  name: author_id
+                  valueNumeric: 5
