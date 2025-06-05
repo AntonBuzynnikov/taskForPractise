@@ -1,0 +1,144 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1749031231580-1
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_customers
+                  name: customer_id
+                  type: BIGINT
+              - column:
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  name: last_name
+                  type: VARCHAR(255)
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: contact_number
+                  type: VARCHAR(255)
+            tableName: customers
+  - changeSet:
+      id: 1749031231580-2
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_order_product
+                  name: order_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_order_product
+                  name: product_id
+                  type: BIGINT
+            tableName: order_product
+  - changeSet:
+      id: 1749031231580-3
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_orders
+                  name: order_id
+                  type: BIGINT
+              - column:
+                  name: customer_customer_id
+                  type: BIGINT
+              - column:
+                  name: order_date
+                  type: DATE
+              - column:
+                  name: shipping_address
+                  type: VARCHAR(255)
+              - column:
+                  name: total_price
+                  type: DECIMAL
+              - column:
+                  name: status
+                  type: SMALLINT
+            tableName: orders
+  - changeSet:
+      id: 1749031231580-4
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_products
+                  name: product_id
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: DECIMAL
+              - column:
+                  name: quantity_stock
+                  type: INT
+            tableName: products
+  - changeSet:
+      id: 1749031231580-5
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: customer_customer_id
+            baseTableName: orders
+            constraintName: FK_ORDERS_ON_CUSTOMER_CUSTOMER
+            referencedColumnNames: customer_id
+            referencedTableName: customers
+  - changeSet:
+      id: 1749031231580-6
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: order_id
+            baseTableName: order_product
+            constraintName: FK_ORDPRO_ON_ORDER
+            referencedColumnNames: order_id
+            referencedTableName: orders
+  - changeSet:
+      id: 1749031231580-7
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: product_id
+            baseTableName: order_product
+            constraintName: FK_ORDPRO_ON_PRODUCT
+            referencedColumnNames: product_id
+            referencedTableName: products
+

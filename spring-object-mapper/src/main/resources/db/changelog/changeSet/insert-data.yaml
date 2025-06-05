@@ -1,0 +1,461 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-sample-data
+      author: anton
+      changes:
+        - insert:
+            tableName: customers
+            columns:
+              - column:
+                  name: first_name
+                  value: John
+              - column:
+                  name: last_name
+                  value: Smith
+              - column:
+                  name: email
+                  value: john.smith@example.com
+              - column:
+                  name: contact_number
+                  value: "+1234567890"
+        - insert:
+            tableName: customers
+            columns:
+              - column:
+                  name: first_name
+                  value: Emily
+              - column:
+                  name: last_name
+                  value: Johnson
+              - column:
+                  name: email
+                  value: emily.j@example.com
+              - column:
+                  name: contact_number
+                  value: "+1987654321"
+        - insert:
+            tableName: customers
+            columns:
+              - column:
+                  name: first_name
+                  value: Michael
+              - column:
+                  name: last_name
+                  value: Brown
+              - column:
+                  name: email
+                  value: michael.b@example.com
+              - column:
+                  name: contact_number
+                  value: "+1122334455"
+        - insert:
+            tableName: customers
+            columns:
+              - column:
+                  name: first_name
+                  value: Sarah
+              - column:
+                  name: last_name
+                  value: Williams
+              - column:
+                  name: email
+                  value: sarah.w@example.com
+              - column:
+                  name: contact_number
+                  value: "+5566778899"
+        - insert:
+            tableName: customers
+            columns:
+              - column:
+                  name: first_name
+                  value: David
+              - column:
+                  name: last_name
+                  value: Lee
+              - column:
+                  name: email
+                  value: david.lee@example.com
+              - column:
+                  name: contact_number
+                  value: "+3344556677"
+
+        # Products
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Laptop"
+              - column:
+                  name: description
+                  value: "High performance laptop"
+              - column:
+                  name: price
+                  value: 999.99
+              - column:
+                  name: quantity_stock
+                  value: 50
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Smartphone"
+              - column:
+                  name: description
+                  value: "Latest model smartphone"
+              - column:
+                  name: price
+                  value: 699.99
+              - column:
+                  name: quantity_stock
+                  value: 100
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Headphones"
+              - column:
+                  name: description
+                  value: "Noise cancelling headphones"
+              - column:
+                  name: price
+                  value: 199.99
+              - column:
+                  name: quantity_stock
+                  value: 75
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Smart Watch"
+              - column:
+                  name: description
+                  value: "Fitness tracker and smartwatch"
+              - column:
+                  name: price
+                  value: 249.99
+              - column:
+                  name: quantity_stock
+                  value: 40
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Tablet"
+              - column:
+                  name: description
+                  value: "10-inch tablet"
+              - column:
+                  name: price
+                  value: 349.99
+              - column:
+                  name: quantity_stock
+                  value: 30
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Wireless Earbuds"
+              - column:
+                  name: description
+                  value: "Bluetooth wireless earbuds"
+              - column:
+                  name: price
+                  value: 129.99
+              - column:
+                  name: quantity_stock
+                  value: 60
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "External Hard Drive"
+              - column:
+                  name: description
+                  value: "1TB portable hard drive"
+              - column:
+                  name: price
+                  value: 79.99
+              - column:
+                  name: quantity_stock
+                  value: 45
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Keyboard"
+              - column:
+                  name: description
+                  value: "Mechanical keyboard"
+              - column:
+                  name: price
+                  value: 89.99
+              - column:
+                  name: quantity_stock
+                  value: 55
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Mouse"
+              - column:
+                  name: description
+                  value: "Wireless mouse"
+              - column:
+                  name: price
+                  value: 49.99
+              - column:
+                  name: quantity_stock
+                  value: 80
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: "Monitor"
+              - column:
+                  name: description
+                  value: "27-inch 4K monitor"
+              - column:
+                  name: price
+                  value: 399.99
+              - column:
+                  name: quantity_stock
+                  value: 25
+
+        # Orders for customers
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: customer_customer_id
+                  value: 1
+              - column:
+                  name: order_date
+                  value: "2023-01-15"
+              - column:
+                  name: shipping_address
+                  value: "123 Main St, New York, NY"
+              - column:
+                  name: total_price
+                  value: 1049.98
+              - column:
+                  name: status
+                  value: 1
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: customer_customer_id
+                  value: 1
+              - column:
+                  name: order_date
+                  value: "2023-02-20"
+              - column:
+                  name: shipping_address
+                  value: "123 Main St, New York, NY"
+              - column:
+                  name: total_price
+                  value: 199.99
+              - column:
+                  name: status
+                  value: 2
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: customer_customer_id
+                  value: 2
+              - column:
+                  name: order_date
+                  value: "2023-03-10"
+              - column:
+                  name: shipping_address
+                  value: "456 Oak Ave, Los Angeles, CA"
+              - column:
+                  name: total_price
+                  value: 699.99
+              - column:
+                  name: status
+                  value: 1
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: customer_customer_id
+                  value: 3
+              - column:
+                  name: order_date
+                  value: "2023-04-05"
+              - column:
+                  name: shipping_address
+                  value: "789 Pine Rd, Chicago, IL"
+              - column:
+                  name: total_price
+                  value: 1299.97
+              - column:
+                  name: status
+                  value: 3
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: customer_customer_id
+                  value: 4
+              - column:
+                  name: order_date
+                  value: "2023-05-12"
+              - column:
+                  name: shipping_address
+                  value: "321 Elm St, Houston, TX"
+              - column:
+                  name: total_price
+                  value: 249.99
+              - column:
+                  name: status
+                  value: 1
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: customer_customer_id
+                  value: 4
+              - column:
+                  name: order_date
+                  value: "2023-06-18"
+              - column:
+                  name: shipping_address
+                  value: "321 Elm St, Houston, TX"
+              - column:
+                  name: total_price
+                  value: 179.98
+              - column:
+                  name: status
+                  value: 2
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: customer_customer_id
+                  value: 5
+              - column:
+                  name: order_date
+                  value: "2023-07-22"
+              - column:
+                  name: shipping_address
+                  value: "654 Maple Dr, Phoenix, AZ"
+              - column:
+                  name: total_price
+                  value: 399.99
+              - column:
+                  name: status
+                  value: 1
+
+        # Order-product relationships
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 1
+              - column:
+                  name: product_id
+                  value: 1
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 1
+              - column:
+                  name: product_id
+                  value: 3
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 2
+              - column:
+                  name: product_id
+                  value: 3
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 3
+              - column:
+                  name: product_id
+                  value: 2
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 4
+              - column:
+                  name: product_id
+                  value: 1
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 4
+              - column:
+                  name: product_id
+                  value: 6
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 4
+              - column:
+                  name: product_id
+                  value: 10
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 5
+              - column:
+                  name: product_id
+                  value: 4
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 6
+              - column:
+                  name: product_id
+                  value: 6
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 6
+              - column:
+                  name: product_id
+                  value: 9
+        - insert:
+            tableName: order_product
+            columns:
+              - column:
+                  name: order_id
+                  value: 7
+              - column:
+                  name: product_id
+                  value: 10
