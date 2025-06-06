@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: /db/changelog/changeset/V1_0_0__create_tables_for_department_and_employee.yaml
+  - include:
+      file: /db/changelog/changeset/V1_0_1__insert_data_to_tables.yaml

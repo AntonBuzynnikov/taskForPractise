@@ -1,0 +1,379 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-departments-and-employees
+      author: your_name
+      changes:
+        - insert:
+            tableName: departments
+            columns:
+              - column:
+                  name: name
+                  value: HR Department
+        - insert:
+            tableName: departments
+            columns:
+              - column:
+                  name: name
+                  value: IT Department
+        - insert:
+            tableName: departments
+            columns:
+              - column:
+                  name: name
+                  value: Finance Department
+        - insert:
+            tableName: departments
+            columns:
+              - column:
+                  name: name
+                  value: Marketing Department
+
+        # Employees for HR Department (random department_id between 1-4)
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: John
+              - column:
+                  name: last_name
+                  value: Smith
+              - column:
+                  name: position
+                  value: HR Manager
+              - column:
+                  name: salary
+                  value: 75000
+              - column:
+                  name: department_id
+                  value: 1
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Emily
+              - column:
+                  name: last_name
+                  value: Johnson
+              - column:
+                  name: position
+                  value: Recruiter
+              - column:
+                  name: salary
+                  value: 65000
+              - column:
+                  name: department_id
+                  value: 1
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Michael
+              - column:
+                  name: last_name
+                  value: Brown
+              - column:
+                  name: position
+                  value: HR Assistant
+              - column:
+                  name: salary
+                  value: 50000
+              - column:
+                  name: department_id
+                  value: 1
+
+        # Employees for IT Department
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: David
+              - column:
+                  name: last_name
+                  value: Wilson
+              - column:
+                  name: position
+                  value: Software Engineer
+              - column:
+                  name: salary
+                  value: 85000
+              - column:
+                  name: department_id
+                  value: 2
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Sarah
+              - column:
+                  name: last_name
+                  value: Davis
+              - column:
+                  name: position
+                  value: DevOps
+              - column:
+                  name: salary
+                  value: 90000
+              - column:
+                  name: department_id
+                  value: 2
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Robert
+              - column:
+                  name: last_name
+                  value: Miller
+              - column:
+                  name: position
+                  value: QA Engineer
+              - column:
+                  name: salary
+                  value: 70000
+              - column:
+                  name: department_id
+                  value: 2
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Jennifer
+              - column:
+                  name: last_name
+                  value: Taylor
+              - column:
+                  name: position
+                  value: Frontend Developer
+              - column:
+                  name: salary
+                  value: 80000
+              - column:
+                  name: department_id
+                  value: 2
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Thomas
+              - column:
+                  name: last_name
+                  value: Anderson
+              - column:
+                  name: position
+                  value: Backend Developer
+              - column:
+                  name: salary
+                  value: 82000
+              - column:
+                  name: department_id
+                  value: 2
+
+        # Employees for Finance Department
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Jessica
+              - column:
+                  name: last_name
+                  value: Martinez
+              - column:
+                  name: position
+                  value: CFO
+              - column:
+                  name: salary
+                  value: 120000
+              - column:
+                  name: department_id
+                  value: 3
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Daniel
+              - column:
+                  name: last_name
+                  value: Thompson
+              - column:
+                  name: position
+                  value: Accountant
+              - column:
+                  name: salary
+                  value: 60000
+              - column:
+                  name: department_id
+                  value: 3
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Lisa
+              - column:
+                  name: last_name
+                  value: Garcia
+              - column:
+                  name: position
+                  value: Financial Analyst
+              - column:
+                  name: salary
+                  value: 75000
+              - column:
+                  name: department_id
+                  value: 3
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Paul
+              - column:
+                  name: last_name
+                  value: Robinson
+              - column:
+                  name: position
+                  value: Auditor
+              - column:
+                  name: salary
+                  value: 68000
+              - column:
+                  name: department_id
+                  value: 3
+
+        # Employees for Marketing Department
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Amanda
+              - column:
+                  name: last_name
+                  value: White
+              - column:
+                  name: position
+                  value: Marketing Director
+              - column:
+                  name: salary
+                  value: 95000
+              - column:
+                  name: department_id
+                  value: 4
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Kevin
+              - column:
+                  name: last_name
+                  value: Harris
+              - column:
+                  name: position
+                  value: Content Manager
+              - column:
+                  name: salary
+                  value: 62000
+              - column:
+                  name: department_id
+                  value: 4
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Michelle
+              - column:
+                  name: last_name
+                  value: Clark
+              - column:
+                  name: position
+                  value: SEO Specialist
+              - column:
+                  name: salary
+                  value: 58000
+              - column:
+                  name: department_id
+                  value: 4
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Ryan
+              - column:
+                  name: last_name
+                  value: Lewis
+              - column:
+                  name: position
+                  value: Social Media Manager
+              - column:
+                  name: salary
+                  value: 55000
+              - column:
+                  name: department_id
+                  value: 4
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Nicole
+              - column:
+                  name: last_name
+                  value: Walker
+              - column:
+                  name: position
+                  value: Graphic Designer
+              - column:
+                  name: salary
+                  value: 60000
+              - column:
+                  name: department_id
+                  value: 4
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Jason
+              - column:
+                  name: last_name
+                  value: Hall
+              - column:
+                  name: position
+                  value: Marketing Analyst
+              - column:
+                  name: salary
+                  value: 65000
+              - column:
+                  name: department_id
+                  value: 4
+        - insert:
+            tableName: employees
+            columns:
+              - column:
+                  name: first_name
+                  value: Stephanie
+              - column:
+                  name: last_name
+                  value: Young
+              - column:
+                  name: position
+                  value: PR Manager
+              - column:
+                  name: salary
+                  value: 70000
+              - column:
+                  name: department_id
+                  value: 4

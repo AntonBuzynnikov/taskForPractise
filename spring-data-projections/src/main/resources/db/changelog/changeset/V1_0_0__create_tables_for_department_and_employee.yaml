@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1749213177156-1
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_departments
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+            tableName: departments
+  - changeSet:
+      id: 1749213177156-2
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_employees
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  name: last_name
+                  type: VARCHAR(255)
+              - column:
+                  name: position
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: salary
+                  type: DOUBLE
+              - column:
+                  name: department_id
+                  type: BIGINT
+            tableName: employees
+  - changeSet:
+      id: 1749213177156-3
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: department_id
+            baseTableName: employees
+            constraintName: FK_EMPLOYEES_ON_DEPARTMENT
+            referencedColumnNames: id
+            referencedTableName: departments
+
