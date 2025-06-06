@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: V1_0_0__create_book_table
+      author: Anton
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: publication_year
+                  type: integer
+                  constraints:
+                    nullable: false

@@ -1,0 +1,185 @@
+databaseChangeLog:
+  - changeSet:
+      id: V1_0_1__insert_data_to_book_table
+      author: Anton
+      changes:
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "The Great Gatsby"
+              - column:
+                  name: author
+                  value: "F. Scott Fitzgerald"
+              - column:
+                  name: publication_year
+                  value: 1925
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "To Kill a Mockingbird"
+              - column:
+                  name: author
+                  value: "Harper Lee"
+              - column:
+                  name: publication_year
+                  value: 1960
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "1984"
+              - column:
+                  name: author
+                  value: "George Orwell"
+              - column:
+                  name: publication_year
+                  value: 1949
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Pride and Prejudice"
+              - column:
+                  name: author
+                  value: "Jane Austen"
+              - column:
+                  name: publication_year
+                  value: 1813
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "The Hobbit"
+              - column:
+                  name: author
+                  value: "J.R.R. Tolkien"
+              - column:
+                  name: publication_year
+                  value: 1937
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "The Catcher in the Rye"
+              - column:
+                  name: author
+                  value: "J.D. Salinger"
+              - column:
+                  name: publication_year
+                  value: 1951
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Moby-Dick"
+              - column:
+                  name: author
+                  value: "Herman Melville"
+              - column:
+                  name: publication_year
+                  value: 1851
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "War and Peace"
+              - column:
+                  name: author
+                  value: "Leo Tolstoy"
+              - column:
+                  name: publication_year
+                  value: 1869
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "The Odyssey"
+              - column:
+                  name: author
+                  value: "Homer"
+              - column:
+                  name: publication_year
+                  value: -800  # Примерно 8 век до н.э.
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Crime and Punishment"
+              - column:
+                  name: author
+                  value: "Fyodor Dostoevsky"
+              - column:
+                  name: publication_year
+                  value: 1866
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Brave New World"
+              - column:
+                  name: author
+                  value: "Aldous Huxley"
+              - column:
+                  name: publication_year
+                  value: 1932
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "The Lord of the Rings"
+              - column:
+                  name: author
+                  value: "J.R.R. Tolkien"
+              - column:
+                  name: publication_year
+                  value: 1954
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Frankenstein"
+              - column:
+                  name: author
+                  value: "Mary Shelley"
+              - column:
+                  name: publication_year
+                  value: 1818
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "The Brothers Karamazov"
+              - column:
+                  name: author
+                  value: "Fyodor Dostoevsky"
+              - column:
+                  name: publication_year
+                  value: 1880
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "The Divine Comedy"
+              - column:
+                  name: author
+                  value: "Dante Alighieri"
+              - column:
+                  name: publication_year
+                  value: 1320
