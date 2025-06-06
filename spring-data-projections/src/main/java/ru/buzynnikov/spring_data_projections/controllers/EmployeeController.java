@@ -7,7 +7,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import ru.buzynnikov.spring_data_projections.dto.CreateEmployeeRequest;
 import ru.buzynnikov.spring_data_projections.models.Employee;
 import ru.buzynnikov.spring_data_projections.projections.EmployeeProjection;
-import ru.buzynnikov.spring_data_projections.services.EmployeeService;
+import ru.buzynnikov.spring_data_projections.services.interfaces.EmployeeService;
 
 import java.util.List;
 

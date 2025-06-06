@@ -11,6 +11,7 @@ import ru.buzynnikov.spring_data_projections.models.Department;
 import ru.buzynnikov.spring_data_projections.models.Employee;
 import ru.buzynnikov.spring_data_projections.projections.EmployeeProjection;
 import ru.buzynnikov.spring_data_projections.repositories.EmployeeRepository;
+import ru.buzynnikov.spring_data_projections.services.interfaces.DepartmentService;
 
 import java.util.List;
 import java.util.Optional;

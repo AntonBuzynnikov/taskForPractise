@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import ru.buzynnikov.spring_data_projections.exceptions.DepartmentNotFoundException;
 import ru.buzynnikov.spring_data_projections.models.Department;
 import ru.buzynnikov.spring_data_projections.repositories.DepartmentRepository;
+import ru.buzynnikov.spring_data_projections.services.interfaces.DepartmentService;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService {

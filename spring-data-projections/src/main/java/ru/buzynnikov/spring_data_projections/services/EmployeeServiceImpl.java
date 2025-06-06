@@ -6,6 +6,8 @@ import ru.buzynnikov.spring_data_projections.exceptions.EmployeeNotFoundExceptio
 import ru.buzynnikov.spring_data_projections.models.Employee;
 import ru.buzynnikov.spring_data_projections.projections.EmployeeProjection;
 import ru.buzynnikov.spring_data_projections.repositories.EmployeeRepository;
+import ru.buzynnikov.spring_data_projections.services.interfaces.DepartmentService;
+import ru.buzynnikov.spring_data_projections.services.interfaces.EmployeeService;
 
 import java.util.List;
 
