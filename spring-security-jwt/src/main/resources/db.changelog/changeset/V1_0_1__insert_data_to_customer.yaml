@@ -1,0 +1,99 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_data_to_customer
+      author: Anton
+      changes:
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: username
+                  value: "user1"
+              - column:
+                  name: password
+                  value: "$2a$10$quUL29/UDpr2TDXgaTCkrOUTAvksR/oPleGKS7HQNiyhE89WH2VO."
+              - column:
+                  name: role
+                  value: "ROLE_USER"
+              - column:
+                  name: is_account_not_locking
+                  value: true
+              - column:
+                  name: failed_login_attempts
+                  value: 0
+
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: username
+                  value: "user2"
+              - column:
+                  name: password
+                  value: "$2a$10$quUL29/UDpr2TDXgaTCkrOUTAvksR/oPleGKS7HQNiyhE89WH2VO."
+              - column:
+                  name: role
+                  value: "ROLE_USER"
+              - column:
+                  name: is_account_not_locking
+                  value: true
+              - column:
+                  name: failed_login_attempts
+                  value: 0
+
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: username
+                  value: "moderator1"
+              - column:
+                  name: password
+                  value: "$2a$10$quUL29/UDpr2TDXgaTCkrOUTAvksR/oPleGKS7HQNiyhE89WH2VO."
+              - column:
+                  name: role
+                  value: "ROLE_MODERATOR"
+              - column:
+                  name: is_account_not_locking
+                  value: true
+              - column:
+                  name: failed_login_attempts
+                  value: 0
+
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: username
+                  value: "admin1"
+              - column:
+                  name: password
+                  value: "$2a$10$quUL29/UDpr2TDXgaTCkrOUTAvksR/oPleGKS7HQNiyhE89WH2VO."
+              - column:
+                  name: role
+                  value: "ROLE_SUPER_ADMIN"
+              - column:
+                  name: is_account_not_locking
+                  value: true
+              - column:
+                  name: failed_login_attempts
+                  value: 0
+
+        - insert:
+            tableName: customer
+            columns:
+              - column:
+                  name: username
+                  value: "user3"
+              - column:
+                  name: password
+                  value: "$2a$10$quUL29/UDpr2TDXgaTCkrOUTAvksR/oPleGKS7HQNiyhE89WH2VO."
+              - column:
+                  name: role
+                  value: "ROLE_USER"
+              - column:
+                  name: is_account_not_locking
+                  value: true
+              - column:
+                  name: failed_login_attempts
+                  value: 0
