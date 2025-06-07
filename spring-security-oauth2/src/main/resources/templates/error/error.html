@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка <span th:text="${statusCode}"></span></title>
+</head>
+<body>
+<div>
+    <h1 th:text="${statusCode}"></h1>
+    <h2 th:text="${errorMessage}"></h2>
+
+    <div th:if="${statusCode == 403}">
+        <p>У вас недостаточно прав для доступа к этой странице.</p>
+        <a th:href="@{/}" class="btn">На главную</a>
+        <a th:href="@{/logout}" class="btn">Войти под другим пользователем</a>
+    </div>
+
+    <div th:if="${statusCode == 404}">
+        <p>Запрошенная страница не существует.</p>
+        <a th:href="@{/}" class="btn">На главную</a>
+    </div>
+
+    <div th:if="${#fields.hasErrors('*')}">
+        <ul>
+            <li th:each="err : ${#fields.errors('*')}" th:text="${err}"></li>
+        </ul>
+    </div>
+
+    <div th:text="${#temporals.format(timestamp, 'dd.MM.yyyy HH:mm:ss')}"></div>
+</div>
+</body>
+</html>

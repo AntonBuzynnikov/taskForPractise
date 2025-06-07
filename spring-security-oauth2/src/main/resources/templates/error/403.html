@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Доступ запрещён (403)</title>
+</head>
+<body>
+<h1>Ошибка 403: Доступ запрещён</h1>
+<p th:if="${#authentication.principal != null}">
+    Вы авторизованы как: <span th:text="${#authentication.name}"></span>,
+    но у вас нет прав для просмотра этой страницы.
+</p>
+<a th:href="@{/}">На главную</a>
+<a th:href="@{/logout}">Войти под другим пользователем</a>
+</body>
+</html>

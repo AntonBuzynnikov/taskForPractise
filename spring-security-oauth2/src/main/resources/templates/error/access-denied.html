@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Access Denied</title>
+</head>
+<body>
+<h1>Access Denied</h1>
+<p th:if="${username}">Sorry, <span th:text="${username}"></span>, you don't have access to this page.</p>
+<a href="/">Go to Home</a>
+</body>
+</html>
