@@ -9,6 +9,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.transaction.annotation.Transactional;
 
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -23,7 +24,8 @@ class EmployeeControllerTest {
 
     @Test
     public void findById() throws Exception {
-        mockMvc.perform(get("/employees/{0}", "1"))
+        mockMvc.perform(get("/employees/{0}", "1")
+                        .with(user("user").password("password")))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").doesNotExist())
                 .andExpect(jsonPath("$.fullName").exists())
@@ -34,7 +36,7 @@ class EmployeeControllerTest {
 
     @Test
     public void findAll() throws Exception {
-        mockMvc.perform(get("/employees"))
+        mockMvc.perform(get("/employees/all"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").isArray())
                 .andExpect(jsonPath("$.[0].id").doesNotExist())
@@ -57,6 +59,7 @@ class EmployeeControllerTest {
                 }""";
 
         mockMvc.perform(post("/employees")
+                        .with(user("user").password("password"))
                         .content(request)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
@@ -77,11 +80,13 @@ class EmployeeControllerTest {
                 }""";
 
         mockMvc.perform(put("/employees/{0}", "1")
+                        .with(user("user").password("password"))
                         .content(request)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNoContent())
                 .andDo(print());
-        mockMvc.perform(get("/employees/{0}", "1"))
+        mockMvc.perform(get("/employees/{0}", "1")
+                        .with(user("user").password("password")))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.fullName").value("Иван Петров"))
                 .andDo(print());
@@ -90,10 +95,12 @@ class EmployeeControllerTest {
     @Test
     @Transactional
     public void delete() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.delete("/employees/{0}", "1"))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/employees/{0}", "1")
+                        .with(user("user").password("password")))
                 .andExpect(status().isNoContent())
                 .andDo(print());
-        mockMvc.perform(get("/employees/{0}", "1"))
+        mockMvc.perform(get("/employees/{0}", "1")
+                .with(user("user").password("password")))
                 .andExpect(status().isNotFound())
                 .andDo(print());
     }
