@@ -1,0 +1,86 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1749549791756-1
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: order_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: product_id
+                  type: BIGINT
+            tableName: order_product
+  - changeSet:
+      id: 1749549791756-2
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_orders
+                  name: order_id
+                  type: UUID
+              - column:
+                  name: total_price
+                  type: DECIMAL
+              - column:
+                  name: user_id
+                  type: BIGINT
+              - column:
+                  name: status
+                  type: VARCHAR(255)
+            tableName: orders
+  - changeSet:
+      id: 1749549791756-3
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_products
+                  name: product_id
+                  type: BIGINT
+                  autoIncrement: true
+              - column:
+                  name: product_name
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: DECIMAL
+            tableName: products
+  - changeSet:
+      id: 1749549791756-4
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: order_id
+            baseTableName: order_product
+            constraintName: FK_ORDPRO_ON_ORDER
+            referencedColumnNames: order_id
+            referencedTableName: orders
+  - changeSet:
+      id: 1749549791756-5
+      author: anton (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: product_id
+            baseTableName: order_product
+            constraintName: FK_ORDPRO_ON_PRODUCT
+            referencedColumnNames: product_id
+            referencedTableName: products
+

@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: /db/changelog/changeset/V1_0_0__init_produc_order_tables.yaml
+  - include:
+      file: /db/changelog/changeset/V1_0_1__insert_data_to_Product.yaml

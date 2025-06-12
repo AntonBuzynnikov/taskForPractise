@@ -1,0 +1,185 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-20-products
+      author: your_name
+      changes:
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 1"
+              - column:
+                  name: price
+                  value: "10.99"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 2"
+              - column:
+                  name: price
+                  value: "15.99"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 3"
+              - column:
+                  name: price
+                  value: "20.50"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 4"
+              - column:
+                  name: price
+                  value: "8.75"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 5"
+              - column:
+                  name: price
+                  value: "12.25"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 6"
+              - column:
+                  name: price
+                  value: "9.99"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 7"
+              - column:
+                  name: price
+                  value: "17.50"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 8"
+              - column:
+                  name: price
+                  value: "22.99"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 9"
+              - column:
+                  name: price
+                  value: "11.11"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 10"
+              - column:
+                  name: price
+                  value: "14.14"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 11"
+              - column:
+                  name: price
+                  value: "19.95"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 12"
+              - column:
+                  name: price
+                  value: "7.50"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 13"
+              - column:
+                  name: price
+                  value: "13.25"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 14"
+              - column:
+                  name: price
+                  value: "16.75"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 15"
+              - column:
+                  name: price
+                  value: "21.00"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 16"
+              - column:
+                  name: price
+                  value: "5.99"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 17"
+              - column:
+                  name: price
+                  value: "18.50"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 18"
+              - column:
+                  name: price
+                  value: "23.25"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 19"
+              - column:
+                  name: price
+                  value: "10.50"
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: "Product 20"
+              - column:
+                  name: price
+                  value: "15.00"
